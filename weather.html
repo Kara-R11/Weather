@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="weather.css" rel="stylesheet">
+    <title>Weather Forecast</title>
+</head>
+
+<body>
+    <!--start-->
+    <section class="main-section">
+        <div class="main-box">
+            <div>
+                <!--search part-->
+                <form class="searchForm" id="searchForm">
+                    <input placeholder="Enter city name (e.g, Tokyo)" id="searchbox" type="text" class="searchBox">
+                    <button id="searchBtn" class="searchBtn">Search</button>
+
+                </form>
+                <div class="searchErr" id="errorBox"></div>
+            </div>
+            <div class="headerPart">
+                <!--city and country-->
+                <h2 class="locationHeader" id="countryHeader">Paris, France</h2>
+                <p class="subHeader">Current Conditions</p>
+            </div>
+            <div class="checkPart">
+                <span class="tempForm">C</span>
+                <div class="state">
+                    <input class="checkBtn" id="checkClassBtn" type="checkbox">
+                </div>
+                <span class="tempForm">F</span>
+            </div>
+            <!--main information-->
+            <div class="mainInfoBox">
+                <p class="stateImg" id="weatherIcon"></p>
+                <h1 class="tempDisplay changeClass" id="temperature">7°C</h1>
+                <p class="skyCondition" id="weathercode">Fog</p>
+                <p class="height"><span class="feelsLike">Feels Like:</span> <span class="feelsLike changeClass"
+                        id="feelslike"> 5°C</span></p>
+            </div>
+            <!--line break-->
+            <div class="lineBreak"></div>
+
+            <!--today details-->
+            <div class="todayDetailsBox">
+
+                <div class="detailSubBox">
+                    <p class="todayDetailTitle">Humidity</p>
+                    <p class="todayDetailInfo" id="humidity">100 %</p>
+                </div>
+
+                <div class="detailSubBox">
+                    <p class="todayDetailTitle">UV Index</p>
+                    <p class="todayDetailInfo" id="uvIndex">0</p>
+                </div>
+
+                <div class="detailSubBox">
+                    <p class="todayDetailTitle">Sunrise</p>
+                    <p class="todayDetailInfo" id="currentSunrise">08:34 AM</p>
+                </div>
+
+                <div class="detailSubBox">
+                    <p class="todayDetailTitle">Sunset</p>
+                    <p class="todayDetailInfo" id="currentSunset">04:53 PM</p>
+                </div>
+
+            </div>
+
+            <div class="windTimeDetailsBox">
+                <div class="detailSubBox">
+                    <p class="todayDetailTitle">Wind Speed</p>
+                    <p class="todayDetailInfo" id="windspeed">5.0 km/h</p>
+                </div>
+                <div class="detailSubBox">
+                    <p class="todayDetailTitle">Timezone</p>
+                    <p class="todayDetailInfo" id="currentTimezone">Europe/Paris</p>
+                </div>
+            </div>
+
+            <!--another line break-->
+            <div class="lineBreak"></div>
+
+            <!--forecast part-->
+            <div class="forecastBox">
+                <h3 class="forecastPartTitle">7-Day Forecast</h3>
+                <div class="forecastDaysPart">
+
+                    <div class="dailyForecast">
+                        <p class="forecastBoxTitle">Today</p>
+                        <p class="forecastPic"></p>
+                        <p class="forecastBoxTempretureHigh  changeClass">10°C</p>
+                        <p class="forecastBoxTempretureLow  changeClass">5°C</p>
+                    </div>
+
+                    <div class="dailyForecast">
+                        <p class="forecastBoxTitle">Tomorrow</p>
+                        <p class="forecastPic"></p>
+                        <p class="forecastBoxTempretureHigh changeClass">13°C</p>
+                        <p class="forecastBoxTempretureLow changeClass">9°C</p>
+                    </div>
+
+                    <div class="dailyForecast">
+                        <p class="forecastBoxTitle">Sat</p>
+                        <p class="forecastPic"></p>
+                        <p class="forecastBoxTempretureHigh changeClass">11°C</p>
+                        <p class="forecastBoxTempretureLow changeClass">6°C</p>
+                    </div>
+
+                    <div class="dailyForecast">
+                        <p class="forecastBoxTitle">Sun</p>
+                        <p class="forecastPic"></p>
+                        <p class="forecastBoxTempretureHigh changeClass">8°C</p>
+                        <p class="forecastBoxTempretureLow changeClass">6°C</p>
+                    </div>
+
+                    <div class="dailyForecast">
+                        <p class="forecastBoxTitle">Mon</p>
+                        <p class="forecastPic"></p>
+                        <p class="forecastBoxTempretureHigh changeClass">12°C</p>
+                        <p class="forecastBoxTempretureLow changeClass">5°C</p>
+                    </div>
+
+                    <div class="dailyForecast no-m">
+                        <p class="forecastBoxTitle">Tue</p>
+                        <p class="forecastPic"></p>
+                        <p class="forecastBoxTempretureHigh changeClass">12°C</p>
+                        <p class="forecastBoxTempretureLow changeClass">6°C</p>
+                    </div>
+
+                    <div class="dailyForecast">
+                        <p class="forecastBoxTitle">Wed</p>
+                        <p class="forecastPic"></p>
+                        <p class="forecastBoxTempretureHigh changeClass">8°C</p>
+                        <p class="forecastBoxTempretureLow changeClass">0°C</p>
+                    </div>
+
+
+                </div>
+            </div>
+
+            <!--refresh btn part-->
+            <div class="refreshBtnPart">
+                <p class="showSuccess" id="successTag"></p>
+                <form class="refreshBtnBox">
+                    <button class="refreshBtn" id="refreshBtn">Refresh Data</button>
+                </form>
+            </div>
+
+            <div class="sourceDataTag">Data provided by Open-Meteo</div>
+
+        </div>
+    </section>
+    <script src="weather.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,534 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+@font-face {
+    font-family: "Roboto";
+    src: url(static/Roboto-Medium.ttf);
+}
+
+@font-face {
+    font-family: "RobotoB";
+    src: url(static/Roboto-Bold.ttf);
+}
+
+@font-face {
+    font-family: "RobotoL";
+    src: url(static/Roboto-Light.ttf);
+}
+
+body {
+    font-family: "Roboto";
+    background-color: rgb(247 249 251);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    padding: 1.5rem;
+}
+
+.main-section {
+    margin: 0 auto;
+    background-color: white;
+    max-width: 600px;
+    border: 1px solid hsl(0deg 0% 83.14%);
+    border-radius: 10px;
+    padding: 1rem;
+    box-shadow: 0px 0px 15px 3px rgba(227, 229, 231, 0.9);
+}
+
+
+/* start of search part */
+
+.searchForm {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 0.75rem;
+}
+
+
+.searchBox {
+    padding: 0.5rem;
+    width: 100%;
+    border-radius: 7px;
+    border: 1px solid hsl(216deg 12.82% 92.35%);
+
+}
+
+.searchBtn {
+    background-color: hsl(215.21deg 98.37% 51.76%);
+    color: white;
+    padding: 0.40rem;
+    border-top-right-radius: 7px;
+    border-bottom-right-radius: 7px;
+    border: 0;
+    border-left: 0px;
+    margin-left: -6px;
+    width: 80px;
+    cursor: pointer;
+}
+
+/* End Of Search part */
+
+
+/* start of header part */
+
+.headerPart {
+    margin-top: 0.75rem;
+    margin-bottom: 1.5rem;
+}
+
+
+.locationHeader {
+    font-size: xx-large;
+    color: black;
+    font-weight: bolder;
+    margin-bottom: 0.5rem;
+}
+
+.subHeader {
+    font-size: smaller;
+    color: hsl(213.75deg 6.78% 46.27%);
+}
+
+/* end of header part */
+
+/* start of check part */
+
+.checkPart {
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+}
+
+.checkBtn {
+    position: relative;
+    background-color: #dfe1e4;
+    border-radius: 72px;
+    border-style: none;
+    margin: 0;
+    height: 20px;
+    width: 38px;
+    appearance: none;
+    flex-shrink: 0;
+    cursor: pointer;
+}
+
+.state {
+    position: relative;
+
+}
+
+.state::before {
+    content: "";
+    position: absolute;
+    right: -6px;
+    left: -6px;
+    top: -6px;
+    bottom: -6px;
+}
+
+.checkBtn::after {
+    transition: left 100ms ease-out;
+}
+
+.checkBtn::after {
+    background-color: white;
+    border-radius: 50%;
+    content: "";
+    height: 13px;
+    left: 3px;
+    width: 14px;
+    position: absolute;
+    top: 4px;
+
+}
+
+.checkBtn:checked {
+    background-color: hsl(215.21deg 98.37% 51.76%);
+}
+
+.checkBtn:checked::after {
+    left: 20px;
+    background-color: white;
+}
+
+.tempForm {
+    padding: 0px 5px;
+}
+
+/* End of checkpart*/
+
+/* start of main info part */
+
+.stateImg {
+    font-size: 6rem;
+    line-height: 1;
+    margin-top: 1rem;
+}
+
+.mainInfoBox {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.tempDisplay {
+    color: hsl(215.21deg 98.37% 51.76%);
+    margin-top: 1rem;
+    font-size: 2rem;
+}
+
+.skyCondition {
+    margin-top: 0.5rem;
+    color: hsl(213.75deg 6.78% 46.27%);
+    font-size: 1rem;
+    font-family: "RobotoL" !important;
+}
+
+.feelsLike {
+    color: hsl(213.75deg 6.78% 46.27%);
+    font-size: 0.7rem;
+    font-family: "RobotoL" !important;
+
+}
+
+.height {
+    margin-top: 0.5rem;
+}
+
+/* End of  main info part */
+
+/* line break*/
+
+.lineBreak {
+    height: 1px;
+    width: 100%;
+    background-color: hsl(216deg 14.29% 93.14%);
+    border-radius: 5px;
+    margin: 0.5rem 0;
+}
+
+/* end of line break */
+
+/* start of today details box and sub box */
+
+.todayDetailsBox {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 0.5rem;
+
+}
+
+.detailSubBox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.todayDetailTitle {
+    color: hsl(213.75deg 6.78% 46.27%);
+    font-size: 0.7rem;
+    font-family: "RobotoL" !important;
+    padding-bottom: 0.5rem;
+}
+
+
+.todayDetailInfo {
+    font-size: 0.8rem;
+}
+
+.windTimeDetailsBox {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0.5rem;
+    margin: 1rem 0;
+}
+
+/* End of today details box and sub box*/
+
+/* start of forecast part */
+
+.forecastDaysPart {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.forecastPartTitle {
+    padding: 1rem 0;
+}
+
+.dailyForecast {
+    width: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: hsl(210deg 16.67% 97.65%);
+    padding: 0.5rem;
+    border-radius: 8px;
+    border: 1px solid hsl(214, 28%, 90%);
+    margin-right: 10px;
+    margin-top: 10px;
+    transition: border-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+    cursor: pointer;
+}
+
+.no-m {
+    margin-right: 0 !important;
+}
+
+.dailyForecast:hover {
+    border: 1px solid hsl(215.21deg 98.37% 51.76%);
+    border-color: hsl(215.21deg 98.37% 51.76%);
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+
+.forecastPic {
+    font-size: 1rem;
+    margin: 0 auto !important;
+}
+
+.forecastBoxTitle {
+    font-size: 0.7rem;
+    padding: 0.4rem 0;
+    font-family: "RobotoL" !important;
+    color: hsl(213.75deg 6.78% 46.27%);
+}
+
+.forecastBoxTempretureHigh {
+    font-size: 0.6rem;
+    padding: 0.4rem 0;
+}
+
+.forecastBoxTempretureLow {
+    font-size: 0.6rem;
+    padding-bottom: 0.4rem;
+    color: hsl(213.75deg 6.78% 46.27%);
+    font-family: "RobotoL" !important;
+}
+
+
+/* End of forecast part */
+
+/* start of refresh btn part*/
+
+.refreshBtnPart {
+    margin: 1rem 0rem;
+
+}
+
+.refreshBtnBox {
+    width: 100%;
+}
+
+.refreshBtn {
+    width: 100%;
+    padding: 0.5rem;
+    color: hsl(215.21deg 98.37% 51.76%);
+    border: 1px solid hsl(217.25deg 99.06% 58.24%);
+    background-color: transparent;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 7px;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+    cursor: pointer;
+}
+
+.refreshBtn:hover {
+    background-color: hsl(217.25deg 99.06% 58.24%);
+    color: white;
+}
+
+.showSuccess {
+    color: rgb(0, 164, 0);
+    margin: 0.5rem 0;
+    font-size: 1rem;
+    opacity: 0;          
+    transform: translateY(-5px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.showSuccess.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+/* end of refresh btn part*/
+
+/* source tag */
+
+.sourceDataTag {
+    font-family: "RobotoL" !important;
+    color: hsl(213.75deg 6.78% 46.27%);
+    font-size: 0.7rem;
+}
+
+@media only screen and (max-width: 600px) {
+    .main-section {
+        width: 100%;
+        height: auto;
+    }
+
+    body {
+        padding: 0;
+    }
+
+    .main-box {
+        margin: 0 auto;
+    }
+
+    .forecastDaysPart {}
+
+    .dailyForecast {
+        width: 100%;
+        margin-right: 0;
+    }
+}
+
+
+.searchErr {
+    color: rgb(211, 7, 7);
+    font-weight: bold;
+    font-size: 1rem;
+
+
+}
